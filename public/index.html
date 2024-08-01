@@ -13,13 +13,46 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
-  <body class="flex flex-col justify-center items-center w-full h-screen">
-    <h1>💭 Chat app</h1>
+  <body class="flex flex-col justify-center items-center w-full h-screen bg-gray-300">
+    <h1 class="mb-6 text-xl font-bold">💭 Chat App</h1>
 
-    <div class="">
+    <div class="border-8 rounded-lg text-gray-700">
+      <!-- header -->
+      <div class="flex items-center justify-center border-b-2 border-gray-400 py-1">
+        <span class="material-symbols-outlined p-2 font-bold"> person </span>
+        <input
+          class="outline-none py-2 px-3 bg-transparent text-xl font-bold"
+          type="text"
+          value="Anonymous"
+        />
+      </div>
+
+      <!-- body -->
+      <div class="w-full h-96 border-b-2 border-gray-400">
+        <div class="flex flex-col h-full overflow-y-auto">
+          <!-- chat messages -->
+          <div class="m-2 border border-white bg-white text-black w-40 text-wrapsss">
+            <p class="text-sm">Hello, how are you today?</p>
+          </div>
+          <div class="mb-2">
+            <p class="text-sm">I'm doing well, thank you!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
       <div class="">
-        <span class="material-symbols-outlined"> person </span>
-        <input type="text" value="Anonymous" />
+        <div class="flex items-center justify-between border-t-2 border-gray-400 py-1">
+          <input
+            class="outline-none py-2 px-3 bg-transparent flex-grow"
+            type="text"
+            placeholder="Type your message..."
+          />
+          <div class="bg-gray-400 h-8 w-0.5"></div>
+          <button class="material-symbols-outlined p-2 text-gray-700 hover:text-gray-800">
+            send
+          </button>
+        </div>
       </div>
     </div>
   </body>
