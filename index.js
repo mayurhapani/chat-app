@@ -34,4 +34,8 @@ io.on("connection", (socket) => {
   socket.on("new_message", (data) => {
     socket.broadcast.emit("chat_message", data);
   });
+
+  socket.on("feedback", (data) => {
+    socket.broadcast.emit("feedback", data);
+  });
 });
