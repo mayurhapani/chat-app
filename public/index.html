@@ -12,6 +12,28 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+
+    <style>
+      /* For WebKit browsers (Chrome, Safari) */
+      #msg_container::-webkit-scrollbar {
+        width: 8px; /* Adjust the width of the scrollbar */
+      }
+
+      #msg_container::-webkit-scrollbar-track {
+        background: #2d2d2d; /* Dark background for the track */
+      }
+
+      #msg_container::-webkit-scrollbar-thumb {
+        background: #4f4f4f; /* Dark color for the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+      }
+
+      /* For Firefox */
+      #msg_container {
+        scrollbar-width: thin; /* Thin scrollbar */
+        scrollbar-color: #4f4f4f #2d2d2d; /* Scrollbar thumb color and track color */
+      }
+    </style>
   </head>
   <body class="flex flex-col justify-center items-center w-full h-screen bg-gray-900">
     <h1 class="mb-6 text-white text-xl font-bold">💭 Chat App</h1>
@@ -32,21 +54,7 @@
       <div
         id="msg_container"
         class="flex flex-col w-full h-96 border-b-2 border-gray-400 overflow-y-auto overflow-x-hidden"
-      >
-        <!-- chat messages -->
-        <div
-          class="m-2 p-2 bg-white text-black rounded-t-xl rounded-br-xl w-56 text-wrap self-start"
-        >
-          <p class="text-sm">Hello, how are you today?</p>
-          <span class="text-xs">😊 mayur 🕓 time</span>
-        </div>
-        <div
-          class="m-2 p-2 border bg-black text-white rounded-t-xl rounded-bl-xl w-56 text-wrap self-end"
-        >
-          <p class="text-sm">I'm doing well, thank you!</p>
-          <span class="text-xs">😊 mayur 🕓 time</span>
-        </div>
-      </div>
+      ></div>
 
       <!-- footer -->
       <div class="">

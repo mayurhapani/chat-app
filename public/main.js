@@ -34,6 +34,7 @@ function addMsgToUi(isOwnMsg, data) {
       </div>`;
 
   msg_container.innerHTML += element;
+  scrollToBottom();
 }
 
 function sendMsg() {
@@ -47,4 +48,8 @@ function sendMsg() {
   addMsgToUi(true, data);
 
   msg_input.value = "";
+}
+
+function scrollToBottom() {
+  msg_container.scrollTo(0, msg_container.scrollHeight);
 }

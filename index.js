@@ -32,8 +32,6 @@ io.on("connection", (socket) => {
   });
 
   socket.on("new_message", (data) => {
-    console.log(data);
-
     socket.broadcast.emit("chat_message", data);
   });
 });
